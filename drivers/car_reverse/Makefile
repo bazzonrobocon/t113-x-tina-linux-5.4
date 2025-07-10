@@ -1,0 +1,1 @@
+obj-$(CONFIG_SUNXI_CAR_REVERSE_AMP)	+= car_reverse_amp/

@@ -1,0 +1,12 @@
+# SPDX-License-Identifier: GPL-2.0
+menu "TVD_Drivers"
+
+config SUNXI_TVD_AMP_SERVER
+	bool "Open amp server"
+	default n
+	help
+	 Say Y here if you want to open amp server in TVD.
+	 Say N here if you do NOT want to open amp server in TVD.
+	 If unsure, say N.
+
+endmenu

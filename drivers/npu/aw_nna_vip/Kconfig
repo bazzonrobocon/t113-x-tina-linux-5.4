@@ -1,0 +1,8 @@
+config AW_NNA_VIP
+	depends on (ARCH_SUNXI)
+	tristate "aw nna vip driver"
+	default n
+	select DMA_SHARED_BUFFER
+	help
+	 Choose Y to enable aw nna vip driver
+

@@ -1,0 +1,2 @@
+source "drivers/npu/aw_nna_vip/Kconfig"
+source "drivers/npu/aw_nna_galcore/Kconfig"

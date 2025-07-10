@@ -1,0 +1,31 @@
+# SPDX-License-Identifier: GPL-2.0-only
+#
+# Allwinner device configuration
+#
+
+config SUNXI_GMAC_NG
+	tristate "Allwinner GMAC NG support"
+	depends on OF && !SUNXI_GMAC
+	select SUNXI_GMAC_MDIO_NG
+	select CRC32
+	help
+	  Support for Allwinner Gigabit ethernet driver.
+
+	  To compile this driver as a module, choose M here.  The module
+	  will be called sunxi-gmac.ko.
+
+config SUNXI_GMAC_MDIO_NG
+	tristate "Allwinner GMAC MDIO NG support"
+	depends on !SUNXI_GMAC
+	select MDIO_BUS
+	select MDIO_DEVICE
+	select PHYLIB
+	select MII
+	help
+	  This driver supports the GMAC MDIO interface in the network
+
+config SUNXI_GMAC_NG_METADATA
+	bool "Allwinner GMAC NG metadata support"
+	depends on SUNXI_GMAC_NG
+	help
+	  Support Allwinner GMAC to transmit and receive metadata

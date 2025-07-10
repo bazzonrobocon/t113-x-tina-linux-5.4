@@ -1,0 +1,18 @@
+#
+# SPDX-License-Identifier: GPL-2.0-only
+#
+# SUNXI CAR REVERSE DRIVER
+#
+menu "Sunxi Car Reverse Drivers"
+
+config SUNXI_CAR_REVERSE
+	tristate "sunxi car reverse driver"
+	default n
+
+
+config SUNXI_CAR_REVERSE_AMP
+	tristate "sunxi fast car reverse driver for amp"
+	depends on SUNXI_CAR_REVERSE
+	default n
+
+endmenu

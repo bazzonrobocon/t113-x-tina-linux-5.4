@@ -1,0 +1,16 @@
+# SPDX-License-Identifier: GPL-2.0-only
+menu "GPIO Motor support"
+
+config MOTOR_CONTROL
+	tristate "Motor Control Driver"
+	depends on OF_GPIO
+	help
+	  Motor Control Driver
+
+config MOTOR_LIMITER
+	tristate "Motor Limiter Driver"
+	depends on OF_GPIO
+	help
+	  Motor Limiter Driver
+
+endmenu
